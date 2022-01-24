@@ -1,0 +1,21 @@
+[
+    {
+      "name": "simplenode",
+      "image": "public.ecr.aws/h9b9h9o2/ecs-test-repo:latest",
+      "cpu": 1000,
+      "memory": 900,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": { 
+          "awslogs-group" : "/ecs/frontend-container",
+          "awslogs-region": "ap-south-1"
+        }
+      }
+    }
+]
